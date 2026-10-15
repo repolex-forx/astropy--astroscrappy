@@ -1,1 +1,118 @@
-Initializing
+# Repolex Knowledge Graph of astropy/astroscrappy
+
+RDF knowledge graph data for [astropy/astroscrappy](https://github.com/astropy/astroscrappy), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download astropy/astroscrappy
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── d18e28defec9f30dc806008cb76de74d47fb2f7f
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── d18e28defec9f30dc806008cb76de74d47fb2f7f
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 18aaa02c5d44d11511452ea51978193a3bd1c1d8.nq.gz
+│   ├── 229cdb7cb57d59d93a4ad9c243d849454edfd1c6.nq.gz
+│   ├── 2419fbf1febf5c03adf449196a856051d53d7ff9.nq.gz
+│   ├── 36da69f6cdbb99cd28120b6b0443b7d428a9837f.nq.gz
+│   ├── 3b72bbd7fe3f69da3025206a500611ad7cac3c1e.nq.gz
+│   ├── 4097659a1d634d67f061bee6005313e0da7f4c63.nq.gz
+│   ├── 4a0b62e49dfaf1404a8bae771a001d5966a1c5f7.nq.gz
+│   ├── 4ef685a1f49902ef4f719b023480d6932dbbd084.nq.gz
+│   ├── 6314d787f436ccbe25652b0d47a4befd6e36779b.nq.gz
+│   ├── 63a5b1f5a5371f5eceb7acfb11a69d625debe282.nq.gz
+│   ├── 672b2733dd4d99988d23c2819bcae3257b34fd3e.nq.gz
+│   ├── 6b214a5c09d3a2ed5399a65ba6100bdfd0b070ca.nq.gz
+│   ├── 75556cbd438f1ccfca47d17b16faaf24ae0eafc7.nq.gz
+│   ├── 7eaa766f1ba09f11b05e4d5e68aab105a4008d71.nq.gz
+│   ├── 8019b489b8f99645475fa5999ecd57944d877508.nq.gz
+│   ├── 838b45731c902e27136554667fb12a421858e8d8.nq.gz
+│   ├── 85ccc2426c4f88c9bbd805b0b0d7f28fac6c8207.nq.gz
+│   ├── 8684e3c2986f041a828107458f95b24b80ae0d86.nq.gz
+│   ├── 8970d9292ff895cd12f350f8a356990132f7e6d5.nq.gz
+│   ├── 8cab685f3240effc93318a15a97be2a3d69cbdef.nq.gz
+│   ├── 8dc53b42b7dc4b2826411beca34a3d9eca14b14a.nq.gz
+│   ├── 91be6211746a8074fb23c9892b2b0cfd3660842a.nq.gz
+│   ├── 93dfe92b9c98e009c2f75b6477817411d3a15585.nq.gz
+│   ├── 94cf22cf4478873657dfc0c5d456bbb9473343db.nq.gz
+│   ├── 9c39a860a9d0ebe9a50f5d96bddb878a3f0b7881.nq.gz
+│   ├── 9cabaf5238d62b16f3ff3c1fd828130815f33324.nq.gz
+│   ├── b59d23c863d69a69e77a1d0062a333efd0a2e2bc.nq.gz
+│   ├── bd26deb0d797d98619adf74608749894a24f8fc3.nq.gz
+│   ├── c08322179dc26e6d76e3bdbdc5b32f858f6b9205.nq.gz
+│   ├── ca0edd0e832d6095b3aa4ebc9dd95fcf0f2ff8c2.nq.gz
+│   ├── cab380b3abdecebe66c8e03cbd2e7c6f297d6056.nq.gz
+│   ├── cb8ed9ab98f681f62689bf615a93503ca5a4e42c.nq.gz
+│   ├── cbe968fe7ba4ea4108556656d72ceb01bff3e7f8.nq.gz
+│   ├── d09b0ecddc64ffe73ea1492bcaeb6239840eb395.nq.gz
+│   ├── dca1908b2e919212e9cde58531836ce5ba59d975.nq.gz
+│   ├── f1118d0c148761aaf7192e66aaedb9c851b76595.nq.gz
+│   ├── f38315b22a4929c146aebfb5f2671bb16c003fd7.nq.gz
+│   ├── fb03f26e6be82581a39a45b00c82f59717bd983d.nq.gz
+│   └── fee3e7cda9758b11fd45271fdff4847f54beebeb.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── d18e28defec9f30dc806008cb76de74d47fb2f7f.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 47 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[astropy/astroscrappy](https://github.com/astropy/astroscrappy)
+
+---
+*Parsed on 2026-10-15 by [repolex](https://repolex.ai)*
